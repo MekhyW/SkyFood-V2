@@ -1,0 +1,36 @@
+[0.008s] Invoking command in '/home/mekhy/Desktop/SkyFood-V2/skyfood_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/build/robot_description -- -j16 -l16
+[0.041s] Invoked command in '/home/mekhy/Desktop/SkyFood-V2/skyfood_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/build/robot_description -- -j16 -l16
+[0.051s] Invoking command in '/home/mekhy/Desktop/SkyFood-V2/skyfood_ws/build/robot_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/build/robot_description
+[0.059s] -- Install configuration: ""
+[0.059s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//urdf
+[0.059s] -- Installing: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//urdf/xacro_variables.xacro
+[0.060s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//urdf/inertial_macros.xacro
+[0.060s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//urdf/robot_base.gazebo
+[0.060s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//urdf/materials.xacro
+[0.060s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//urdf/caster_ball.xacro
+[0.060s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//urdf/sensors.xacro
+[0.060s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//urdf/robot_base.xacro
+[0.060s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//urdf/wheels.xacro
+[0.060s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//launch
+[0.060s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//launch/robot_description.launch.py
+[0.061s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//launch/transforms.launch.py
+[0.061s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//launch/gazebo.launch.py
+[0.061s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//rviz
+[0.061s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//rviz/robot_vis.rviz
+[0.061s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description//world
+[0.061s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/ament_index/resource_index/package_run_dependencies/robot_description
+[0.061s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/ament_index/resource_index/parent_prefix_path/robot_description
+[0.061s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/environment/ament_prefix_path.sh
+[0.061s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/environment/ament_prefix_path.dsv
+[0.061s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/environment/path.sh
+[0.062s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/environment/path.dsv
+[0.062s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/local_setup.bash
+[0.062s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/local_setup.sh
+[0.062s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/local_setup.zsh
+[0.062s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/local_setup.dsv
+[0.063s] -- Installing: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/package.dsv
+[0.063s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/ament_index/resource_index/packages/robot_description
+[0.063s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/cmake/robot_descriptionConfig.cmake
+[0.063s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/cmake/robot_descriptionConfig-version.cmake
+[0.063s] -- Up-to-date: /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/install/robot_description/share/robot_description/package.xml
+[0.064s] Invoked command in '/home/mekhy/Desktop/SkyFood-V2/skyfood_ws/build/robot_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/mekhy/Desktop/SkyFood-V2/skyfood_ws/build/robot_description
