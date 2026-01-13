@@ -18,6 +18,10 @@
   <xacro:property name="wheel_cylinder_radius" value="0.085" />
   <xacro:property name="wheel_cylinder_height" value="0.045" />
 
+  <!--Tower box-->
+  <xacro:property name="tower_box_length" value="0.478" />
+  <xacro:property name="tower_box_width" value="0.448" />
+  <xacro:property name="tower_box_height" value="0.64" />
 
 <!--Positions-->
   <!--Chasis_box-->

@@ -41,6 +41,22 @@
       <material name="red"/>
     </visual>
 
+    <collision name='tower_collision'>
+      <origin xyz="0 0 0.58" rpy="0 0 0"/>
+      <geometry>
+        <box size="${tower_box_length} ${tower_box_width} ${tower_box_height}"/>
+      </geometry>
+    </collision>
+
+
+    <visual name='tower_visual'>
+      <origin xyz="0 0 0.58" rpy="0 0 0"/>
+      <geometry>
+        <box size="${tower_box_length} ${tower_box_width} ${tower_box_height}"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+
     <collision name='caster_collision'>
       <origin xyz="${chasis_caster_x} ${chasis_caster_y} ${chasis_caster_z}" rpy=" ${chasis_caster_r} ${chasis_caster_p} ${chasis_caster_ya}"/>
       <geometry>
@@ -112,7 +128,7 @@
     <visual name="lidar_visual">
       <origin xyz="0 0 0.01" rpy="0 0 0"/>
       <geometry>
-        <cylinder radius="0.1" length="0.05"/>
+        <cylinder radius="0.05" length="0.035"/>
       </geometry>
     </visual>
   </link>
@@ -120,13 +136,13 @@
   <joint name="lidar_joint" type="fixed">
     <parent link="chassis"/>
     <child link="lidar_link"/>
-    <origin xyz="0 0 0.24" rpy="0 0 0"/>
+    <origin xyz="0 0 0.2" rpy="0 0 0"/>
   </joint>
 
 
   <link name="camera_link">
     <visual name="camera_visual">
-      <origin xyz="0.01 0 0" rpy="0 0 0"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
         <box size="0.02 0.15 0.1"/>
       </geometry>
@@ -136,7 +152,7 @@
   <joint name="camera_joint" type="fixed">
     <parent link="chassis"/>
     <child link="camera_link"/>
-    <origin xyz="0.20 0 0" rpy="0 0 0"/>
+    <origin xyz="0.239 0 0.84" rpy="0 0 0"/>
   </joint>
 
 
