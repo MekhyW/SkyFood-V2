@@ -35,22 +35,26 @@
 
 
   <!--Chasis_caster-->
-  <xacro:property name="chasis_caster_x" value="-0.2" />
-  <xacro:property name="chasis_caster_y" value="0" />
-  <xacro:property name="chasis_caster_z" value="-0.047" />
 
   <xacro:property name="chasis_caster_r" value="0" />
   <xacro:property name="chasis_caster_p" value="0" />
   <xacro:property name="chasis_caster_ya" value="0" />
 
+  <xacro:property name="chasis_caster_x" value="-0.2" />
+  <xacro:property name="chasis_caster_y" value="0.145" />
+  <xacro:property name="chasis_caster_z" value="-0.047" />
 
   <xacro:property name="chasis_caster2_x" value="0.2" />
-  <xacro:property name="chasis_caster2_y" value="0" />
+  <xacro:property name="chasis_caster2_y" value="0.145" />
   <xacro:property name="chasis_caster2_z" value="-0.047" />
 
-  <xacro:property name="chasis_caster2_r" value="0" />
-  <xacro:property name="chasis_caster2_p" value="0" />
-  <xacro:property name="chasis_caster2_ya" value="0" />
+  <xacro:property name="chasis_caster3_x" value="-0.2" />
+  <xacro:property name="chasis_caster3_y" value="-0.145" />
+  <xacro:property name="chasis_caster3_z" value="-0.047" />
+
+  <xacro:property name="chasis_caster4_x" value="0.2" />
+  <xacro:property name="chasis_caster4_y" value="-0.145" />
+  <xacro:property name="chasis_caster4_z" value="-0.047" />
 
   <!--Wheel-->
   <xacro:property name="wheel_x" value="0" />

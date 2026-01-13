@@ -8,6 +8,14 @@
         <geometry>
           <cylinder radius="${wheel_cylinder_radius}" length="${wheel_cylinder_height}"/>
         </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+            </ode>
+          </friction>
+        </surface>
       </collision>
       <visual name="left_wheel_visual">
         <origin xyz="${wheel_x} ${wheel_y} ${wheel_z}" rpy="${wheel_r} ${wheel_p} ${wheel_ya}"/>
@@ -18,8 +26,8 @@
       </visual>
       <inertial>
         <origin xyz="${wheel_x} ${wheel_y} ${wheel_z}" rpy="${wheel_r} ${wheel_p} ${wheel_ya}"/>
-        <mass value="5"/>
-        <cylinder_inertia m="5" r="${wheel_cylinder_radius}" h="${wheel_cylinder_height}"/>
+        <mass value="1"/>
+        <cylinder_inertia m="1" r="${wheel_cylinder_radius}" h="${wheel_cylinder_height}"/>
         <inertia
           ixx="1.0" ixy="0.0" ixz="0.0"
           iyy="1.0" iyz="0.0"
@@ -33,6 +41,14 @@
         <geometry>
           <cylinder radius="${wheel_cylinder_radius}" length="${wheel_cylinder_height}"/>
         </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+            </ode>
+          </friction>
+        </surface>
       </collision>
       <visual name="right_wheel_visual">
         <origin xyz="${wheel_x} ${wheel_y} ${wheel_z}" rpy="${wheel_r} ${wheel_p} ${wheel_ya}"/>
@@ -43,8 +59,8 @@
       </visual>
       <inertial>
         <origin xyz="${wheel_x} ${wheel_y} ${wheel_z}" rpy="${wheel_r} ${wheel_p} ${wheel_ya}"/>
-        <mass value="5"/>
-        <cylinder_inertia m="5" r="${wheel_cylinder_radius}" h="${wheel_cylinder_height}"/>
+        <mass value="1"/>
+        <cylinder_inertia m="1" r="${wheel_cylinder_radius}" h="${wheel_cylinder_height}"/>
         <inertia
           ixx="1.0" ixy="0.0" ixz="0.0"
           iyy="1.0" iyz="0.0"
