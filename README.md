@@ -4,7 +4,7 @@
 2. Create a simulated robot chassis with lidar and generic IMU ✅
 3. SLAM and autonomous navigation from point A to point B
 4. Saving and loading maps in functions
-5. Saving points of interest and base
+5. Saving points of interest and base, and functions for navigating to points
 6. Behavior tree, create behavior for base loading
 7. Create behavior to open and close doors
 8. Docker and Docker Compose
