@@ -1,8 +1,8 @@
 # SkyFood-V2
 
-1. Install Ubuntu with ROS2 and Gazebo on SSD
-2. Create a simulated robot chassis with lidar and generic IMU
-3. Launch file, autonomous navigation in the simulated robot from point A to point B
+1. Install Ubuntu with ROS2 and Gazebo on SSD ✅
+2. Create a simulated robot chassis with lidar and generic IMU ✅
+3. SLAM and autonomous navigation from point A to point B
 4. Saving and loading maps in functions
 5. Saving points of interest and base
 6. Behavior tree, create behavior for base loading
