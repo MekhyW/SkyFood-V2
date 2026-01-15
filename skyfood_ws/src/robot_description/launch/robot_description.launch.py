@@ -21,7 +21,7 @@ def generate_launch_description():
 
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py')]),
+                    get_package_share_directory('robot_description'), 'launch', 'gazebo.launch.py')]),
             )
 
     transforms = IncludeLaunchDescription(

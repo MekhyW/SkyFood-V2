@@ -8,7 +8,7 @@ def generate_launch_description():
 
     description_package_name = "robot_description"
     description_package_path = os.path.join(get_package_share_directory(description_package_name))
-    world_file_name = ''
+    world_file_name = 'house.world'
 
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([
