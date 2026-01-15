@@ -1,7 +1,6 @@
 from setuptools import find_packages, setup
-import os
-from glob import glob
-package_name = 'rm_localization'
+
+package_name = 'rm_navigator'
 
 setup(
     name=package_name,
@@ -11,8 +10,6 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        (os.path.join('share', 'rm_localization', 'launch'), glob('launch/*.py')),
-        (os.path.join('share', 'rm_localization', 'config'), glob('config/*.yaml')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
