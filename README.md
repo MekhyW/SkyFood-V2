@@ -27,3 +27,18 @@
 25. Final screen software with face recognition
 
 FUTURE: Map synchronization, fleet management, etc.
+
+## Launch
+
+```bash
+cd skyfood_ws
+source install/setup.bash
+```
+
+```bash
+ros2 launch robot_description robot_description.launch.py # Robot and virtual world
+ros2 launch rm_localization ekf.launch.py # Sensor fusion
+ros2 launch rm_localization amcl.launch.py # IF EXISTING MAP: AMCL localization
+ros2 launch rm_slam slam.launch.py # IF NO MAP: SLAM
+ros2 run teleop_twist_keyboard teleop_twist_keyboard # Manual control
+```
