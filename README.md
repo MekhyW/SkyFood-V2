@@ -9,11 +9,11 @@
 7. Behavior tree, create behavior for base loading
 8. Create behavior to open and close doors
 9. Docker and Docker Compose
-10. Make the RPLidar work correctly
+10. Make the RPLidar work correctly ✅
 11. Make the IMU work correctly
 12. Integration with motor drivers
-13. Luxonis camera tests
-14. Microphone tests
+13. Luxonis camera communication tests
+14. Microphone communication tests ✅
 15. Motor driver communication tests
 16. Environment installation on Jetson
 17. Assembly on physical chassis
