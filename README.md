@@ -8,23 +8,24 @@
 6. Saving points of interest and base, and functions for navigating to points
 7. Behavior tree, create behavior for base loading
 8. Create behavior to open and close doors
-9. Docker and Docker Compose
-10. Make the RPLidar work correctly ✅
-11. Make the IMU work correctly
+9. Sound playback
+10. Docker and Docker Compose
+11. Make the RPLidar work correctly ✅
 12. Integration with motor drivers
-13. Luxonis camera communication tests
+13. Luxonis camera communication tests (expose IMU and RGBD)
 14. Microphone communication tests ✅
 15. Motor driver communication tests
-16. Environment installation on Jetson
-17. Assembly on physical chassis
-18. Integrate all physical hardware into the main code and get it running, driver parameter tuning
-19. Integration with the application for mission control and debugging
-20. Computer vision project;  Object detection and navigation improvements
-21. Integration with elevator systems (isolated)
-22. Elevator call and floor change behavior
-23. LiveKit and local conversational AI
-24. AI with function calls for autonomous control and decision making
-25. Final screen software with face recognition
+16. Door servo motor tests
+17. Environment installation on Jetson
+18. Assembly on physical chassis
+19. Integrate all physical hardware into the main code and get it running, driver parameter tuning
+20. Integration with the application for mission control and debugging
+21. Computer vision project;  Object detection and navigation improvements
+22. Integration with elevator systems (isolated)
+23. Elevator call and floor change behavior
+24. LiveKit and local conversational AI
+25. AI with function calls for autonomous control and decision making
+26. Final screen software with face recognition
 
 FUTURE: Map synchronization, fleet management, etc.
 
