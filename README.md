@@ -12,7 +12,7 @@
 10. Docker and Docker Compose
 11. Make the RPLidar work correctly ✅
 12. Integration with motor drivers
-13. Luxonis camera communication tests (expose IMU and RGBD)
+13. OAK4 camera communication tests on Luxonis Hub ✅
 14. Microphone communication tests ✅
 15. Motor driver communication tests
 16. Door servo motor tests
@@ -20,7 +20,7 @@
 18. Assembly on physical chassis
 19. Integrate all physical hardware into the main code and get it running, driver parameter tuning
 20. Integration with the application for mission control and debugging
-21. Computer vision project;  Object detection and navigation improvements
+21. Computer vision app;  Object detection, proximity detection and IMU topic exposure 
 22. Integration with elevator systems (isolated)
 23. Elevator call and floor change behavior
 24. LiveKit and local conversational AI
