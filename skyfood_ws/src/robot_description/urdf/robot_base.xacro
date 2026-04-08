@@ -6,7 +6,6 @@
   <xacro:include filename="$(find robot_description)/urdf/materials.xacro" />
   <xacro:include filename="$(find robot_description)/urdf/xacro_variables.xacro" />
   <xacro:include filename="$(find robot_description)/urdf/wheels.xacro" />
-  <xacro:include filename="$(find robot_description)/urdf/caster_ball.xacro" />
   <xacro:include filename="$(find robot_description)/urdf/sensors.xacro" />
 
   <!-- Add dummy base link -->
@@ -18,12 +17,11 @@
 
     <inertial>
       <mass value="30.0"/>
-      <origin xyz="0.0 0 0.1" rpy=" 0 0 0"/>
-      <box_inertia m="30" l="${chasis_box_length}" w="${chasis_box_width}" h="${chasis_box_height}"/>
+      <origin xyz="0.0 0 0.1" rpy="0 0 0"/>
       <inertia
-          ixx="0.5" ixy="0" ixz="0"
-          iyy="1.0" iyz="0"
-          izz="0.1"
+          ixx="1.523" ixy="0" ixz="0"
+          iyy="1.597" iyz="0"
+          izz="0.803"
       />
     </inertial>
 
@@ -206,8 +204,7 @@
   </joint>
 
 
-  <!-- Include wheel and caster macros -->
+  <!-- Include wheel macro -->
   <xacro:wheels_macro />
-  <xacro:caster_balls_macro />
 
 </robot>

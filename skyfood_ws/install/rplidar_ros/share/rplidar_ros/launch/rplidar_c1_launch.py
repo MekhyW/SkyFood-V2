@@ -1,1 +1,0 @@
-/home/mekhy/Desktop/SkyFood-V2/skyfood_ws/src/rplidar_ros/launch/rplidar_c1_launch.py
