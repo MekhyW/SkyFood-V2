@@ -6,21 +6,23 @@
       <legacyMode>false</legacyMode>
       <alwaysOn>true</alwaysOn>
       <updateRate>100</updateRate>
-      <left_joint>left_wheel_hinge</left_joint>
-      <right_joint>right_wheel_hinge</right_joint>
-      <wheel_separation>0.332</wheel_separation>
-      <wheel_diameter>0.17</wheel_diameter>
-      <torque>20</torque>
-      <command_topic>cmd_vel</command_topic>
-      <odometry_topic>odom</odometry_topic>
-      <odometry_frame>odom</odometry_frame>
-      <robot_base_frame>chassis</robot_base_frame>
+      <leftJoint>left_wheel_hinge</leftJoint>
+      <rightJoint>right_wheel_hinge</rightJoint>
+      <wheelSeparation>0.332</wheelSeparation>
+      <wheelDiameter>0.17</wheelDiameter>
+      <wheelTorque>200</wheelTorque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <robotBaseFrame>chassis</robotBaseFrame>
     </plugin>
   </gazebo>
 
   <gazebo reference="chassis">
-      <material>Gazebo/Red</material>
-    </gazebo>
+    <material>Gazebo/Red</material>
+    <mu1>0.0001</mu1>
+    <mu2>0.0001</mu2>
+  </gazebo>
 
   <gazebo reference="right_wheel">
     <material>Gazebo/Black</material>
@@ -29,7 +31,7 @@
     <kp>1000000.0</kp>
     <kd>10.0</kd>
     <minDepth>0.001</minDepth>
-    <maxVel>0.1</maxVel>
+    <maxVel>100.0</maxVel>
     <fdir1>1 0 0</fdir1>
   </gazebo>
 
@@ -40,7 +42,7 @@
     <kp>1000000.0</kp>
     <kd>10.0</kd>
     <minDepth>0.001</minDepth>
-    <maxVel>0.1</maxVel>
+    <maxVel>100.0</maxVel>
     <fdir1>1 0 0</fdir1>
   </gazebo>
 
