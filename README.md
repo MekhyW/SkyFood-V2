@@ -5,31 +5,32 @@
 3. Localization and SLAM packages working ✅
 4. Autonomous navigation from point A to point B, and hyperparameter optimization
 5. Saving and loading maps in functions
-6. Saving points of interest and base, and functions for navigating to points
-7. Behavior tree, create behavior for base loading
+6. Saving points of interest and docking stations, and functions for navigating to points
+7. Behavior tree, create behavior for autodocking
 8. Create behavior to open and close doors
 9. Sound playback
 10. Docker and Docker Compose
 11. Make the RPLidar work correctly ✅
 12. Integration with motor drivers
 13. OAK4 camera communication tests on Luxonis Hub ✅
-14. Computer vision app;  Object detection, proximity detection and IMU topic exposure ✅
-15. Force stop by proximity detection and slope detection
-16. Microphone communication tests ✅
-17. Motor driver communication tests
-18. Door servo motor tests
-19. LiveKit and local conversational AI
-20. AI with function calls for autonomous control and decision making
-21. Final screen software
-22. 4G setup with netbird client 
-23. Environment installation on Jetson
-24. Assembly on physical chassis
-25. Integrate all physical hardware into the main code and get it running, driver parameter tuning
-26. Integration with the application for mission control and debugging
-27. Integration with elevator systems (isolated)
-28. Elevator call and floor change behavior
-29. Integration with AlphaCode platform
-30. Observability LGTM stack
+14. Computer vision app;  face/person detection, proximity detection and IMU topic exposure ✅
+15. A075V floor camera setup
+16. Force stop by proximity detection and slope detection (depth map fusion)
+17. Microphone communication tests ✅
+18. Motor driver communication tests
+19. Door servo motor tests
+20. LiveKit and local conversational AI
+21. AI with function calls for autonomous control and decision making
+22. Final screen software
+23. 4G setup with netbird client 
+24. Environment installation on Jetson
+25. Assembly on physical chassis
+26. Integrate all physical hardware into the main code and get it running, driver parameter tuning
+27. Integration with the application for mission control and debugging
+28. Integration with elevator systems (isolated)
+29. Elevator call and floor change behavior
+30. Integration with AlphaCode platform
+31. Observability LGTM stack
 
 ## Launch
 
