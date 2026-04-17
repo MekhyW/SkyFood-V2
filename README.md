@@ -22,16 +22,15 @@
 20. LiveKit and local conversational AI
 21. AI with function calls for autonomous control and decision making
 22. Final screen software
-23. Environment installation on Jetson
-24. Assembly on physical chassis
-25. Integrate all physical hardware into the main code and get it running, driver parameter tuning
-26. Integration with the application for mission control and debugging
-27. Integration with elevator systems (isolated)
-28. Elevator call and floor change behavior
-29. Integration with AlphaCode platform
-30. Observability LGTM stack
-
-FUTURE: Map synchronization, fleet management, etc.
+23. 4G setup with netbird client 
+24. Environment installation on Jetson
+25. Assembly on physical chassis
+26. Integrate all physical hardware into the main code and get it running, driver parameter tuning
+27. Integration with the application for mission control and debugging
+28. Integration with elevator systems (isolated)
+29. Elevator call and floor change behavior
+30. Integration with AlphaCode platform
+31. Observability LGTM stack
 
 ## Launch
 
