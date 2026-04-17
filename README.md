@@ -13,21 +13,23 @@
 11. Make the RPLidar work correctly ✅
 12. Integration with motor drivers
 13. OAK4 camera communication tests on Luxonis Hub ✅
-14. Microphone communication tests ✅
-15. Motor driver communication tests
-16. Door servo motor tests
-17. Environment installation on Jetson
-18. Assembly on physical chassis
-19. Integrate all physical hardware into the main code and get it running, driver parameter tuning
-20. Integration with the application for mission control and debugging
-21. Computer vision app;  Object detection, proximity detection and IMU topic exposure ✅
-22. Integration with elevator systems (isolated)
-23. Elevator call and floor change behavior
-24. LiveKit and local conversational AI
-25. AI with function calls for autonomous control and decision making
-26. Final screen software with face recognition
-27. Integration with AlphaCode platform
-28. Observability LGTM stack
+14. Computer vision app;  Object detection, proximity detection and IMU topic exposure ✅
+15. Train dock detection model
+16. Force stop by proximity detection and slope detection
+17. Microphone communication tests ✅
+18. Motor driver communication tests
+19. Door servo motor tests
+20. LiveKit and local conversational AI
+21. AI with function calls for autonomous control and decision making
+22. Final screen software
+23. Environment installation on Jetson
+24. Assembly on physical chassis
+25. Integrate all physical hardware into the main code and get it running, driver parameter tuning
+26. Integration with the application for mission control and debugging
+27. Integration with elevator systems (isolated)
+28. Elevator call and floor change behavior
+29. Integration with AlphaCode platform
+30. Observability LGTM stack
 
 FUTURE: Map synchronization, fleet management, etc.
 
