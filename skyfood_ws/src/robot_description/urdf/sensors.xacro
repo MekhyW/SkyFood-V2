@@ -115,6 +115,8 @@
             <right_joint>right_wheel_hinge</right_joint>
             <wheel_separation>0.332</wheel_separation>
             <wheel_diameter>0.17</wheel_diameter>
+            <max_wheel_torque>2000</max_wheel_torque>
+            <max_wheel_acceleration>50.0</max_wheel_acceleration>
             <command_topic>cmd_vel</command_topic>
             <publish_odom>true</publish_odom>
             <publish_odom_tf>false</publish_odom_tf>
