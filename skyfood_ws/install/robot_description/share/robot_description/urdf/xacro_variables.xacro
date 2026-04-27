@@ -69,11 +69,11 @@
 <!--Joint variables-->
 
   <xacro:property name="right_wheel_x" value="0.0" />
-  <xacro:property name="right_wheel_y" value="0.166" />
+  <xacro:property name="right_wheel_y" value="-0.166" />
   <xacro:property name="right_wheel_z" value="0" />
 
   <xacro:property name="left_wheel_x" value="0" />
-  <xacro:property name="left_wheel_y" value="-0.166" />
+  <xacro:property name="left_wheel_y" value="0.166" />
   <xacro:property name="left_wheel_z" value="0" />
 
 

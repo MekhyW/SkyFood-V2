@@ -110,11 +110,11 @@
     <!-- Differential Controller Plugin -->
     <gazebo>
         <plugin name="gazebo_ros_diff_drive" filename="libgazebo_ros_diff_drive.so">
-            <update_rate>10</update_rate>
+            <update_rate>50</update_rate>
             <left_joint>left_wheel_hinge</left_joint>
             <right_joint>right_wheel_hinge</right_joint>
-            <wheel_separation>0.4</wheel_separation>
-            <wheel_diameter>0.2</wheel_diameter>
+            <wheel_separation>0.332</wheel_separation>
+            <wheel_diameter>0.17</wheel_diameter>
             <command_topic>cmd_vel</command_topic>
             <publish_odom>true</publish_odom>
             <publish_odom_tf>false</publish_odom_tf>
