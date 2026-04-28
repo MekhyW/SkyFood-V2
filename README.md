@@ -4,7 +4,7 @@
 2. Create a simulated robot chassis with lidar and generic IMU ✅
 3. Localization and SLAM packages working ✅
 4. Autonomous navigation from point A to point B ✅
-5. Hyperparameter optimization for nav2 
+5. Hyperparameter optimization for nav2 ✅
 6. Saving and loading maps in functions
 7. Saving points of interest and docking stations, and functions for navigating to points
 8. Behavior tree, create behavior for autodocking with opennav_docking
