@@ -3,34 +3,35 @@
 1. Install Ubuntu with ROS2 and Gazebo ✅
 2. Create a simulated robot chassis with lidar and generic IMU ✅
 3. Localization and SLAM packages working ✅
-4. Autonomous navigation from point A to point B, and hyperparameter optimization
-5. Saving and loading maps in functions
-6. Saving points of interest and docking stations, and functions for navigating to points
-7. Behavior tree, create behavior for autodocking with opennav_docking
-8. Create behavior to open and close doors
-9. Sound playback
-10. Docker and Docker Compose
-11. Make the RPLidar work correctly ✅
-12. Integration with motor drivers
-13. OAK4 camera communication tests on Luxonis Hub ✅
-14. Computer vision app;  face/person detection, proximity detection and IMU topic exposure ✅
-15. A075V floor camera setup
-16. Force stop by proximity detection and slope detection (depth map fusion)
-17. Microphone communication tests ✅
-18. Motor driver communication tests
-19. Door servo motor tests
-20. LiveKit and local conversational AI
-21. AI with function calls for autonomous control and decision making
-22. Final screen software
-23. 4G setup with netbird client 
-24. Environment installation on Jetson
-25. Assembly on physical chassis
-26. Integrate all physical hardware into the main code and get it running, driver parameter tuning
-27. Integration with the application for mission control and debugging
-28. Integration with elevator systems (isolated)
-29. Elevator call and floor change behavior
-30. Integration with AlphaCode platform
-31. Observability Foxglove stack
+4. Autonomous navigation from point A to point B ✅
+5. Hyperparameter optimization for nav2 
+6. Saving and loading maps in functions
+7. Saving points of interest and docking stations, and functions for navigating to points
+8. Behavior tree, create behavior for autodocking with opennav_docking
+9. Create behavior to open and close doors
+10. Sound playback
+11. Docker and Docker Compose
+12. Make the RPLidar work correctly ✅
+13. Integration with motor drivers
+14. OAK4 camera communication tests on Luxonis Hub ✅
+15. Computer vision app;  face/person detection, proximity detection and IMU topic exposure ✅
+16. A075V floor camera setup
+17. Force stop by proximity detection and slope detection (depth map fusion)
+18. Microphone communication tests ✅
+19. Motor driver communication tests
+20. Door servo motor tests
+21. LiveKit and local conversational AI
+22. AI with function calls for autonomous control and decision making
+23. Final screen software
+24. 4G setup with netbird client 
+25. Environment installation on Jetson
+26. Assembly on physical chassis
+27. Integrate all physical hardware into the main code and get it running, driver parameter tuning
+28. Integration with the application for mission control and debugging
+29. Integration with elevator systems (isolated)
+30. Elevator call and floor change behavior
+31. Integration with AlphaCode platform
+32. Observability Foxglove stack
 
 ## Launch
 
