@@ -6,7 +6,7 @@
 4. Autonomous navigation from point A to point B, and hyperparameter optimization
 5. Saving and loading maps in functions
 6. Saving points of interest and docking stations, and functions for navigating to points
-7. Behavior tree, create behavior for autodocking
+7. Behavior tree, create behavior for autodocking with opennav_docking
 8. Create behavior to open and close doors
 9. Sound playback
 10. Docker and Docker Compose
@@ -30,7 +30,7 @@
 28. Integration with elevator systems (isolated)
 29. Elevator call and floor change behavior
 30. Integration with AlphaCode platform
-31. Observability LGTM stack
+31. Observability Foxglove stack
 
 ## Launch
 
