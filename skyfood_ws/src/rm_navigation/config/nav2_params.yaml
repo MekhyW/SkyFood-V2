@@ -67,9 +67,9 @@ controller_server:
     # DWB parameters
     FollowPath:
       plugin: "nav2_rotation_shim_controller::RotationShimController"
-      angular_dist_threshold: 0.785
+      angular_dist_threshold: 0.5
       forward_sampling_distance: 0.5
-      angular_disengage_threshold: 0.3925
+      angular_disengage_threshold: 0.3
       rotate_to_heading_angular_vel: 1.8
       max_angular_accel: 3.2
       simulate_ahead_time: 1.0
@@ -133,8 +133,8 @@ local_costmap:
       plugins: ["voxel_layer", "inflation_layer"]
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
-        cost_scaling_factor: 3.0
-        inflation_radius: 0.55
+        cost_scaling_factor: 5.0
+        inflation_radius: 0.35
       voxel_layer:
         plugin: "nav2_costmap_2d::VoxelLayer"
         enabled: True
@@ -144,13 +144,35 @@ local_costmap:
         z_voxels: 16
         max_obstacle_height: 2.0
         mark_threshold: 0
-        observation_sources: scan
+        observation_sources: scan depth_camera depth_camera_2
         scan:
           topic: /scan
           max_obstacle_height: 2.0
           clearing: True
           marking: True
           data_type: "LaserScan"
+        depth_camera:
+          topic: /depth_camera/points
+          max_obstacle_height: 2.0
+          min_obstacle_height: 0.1
+          clearing: True
+          marking: True
+          data_type: "PointCloud2"
+          obstacle_max_range: 8.0
+          obstacle_min_range: 0.0
+          raytrace_max_range: 10.0
+          raytrace_min_range: 0.0
+        depth_camera_2:
+          topic: /depth_camera_2/points
+          max_obstacle_height: 1.0
+          min_obstacle_height: 0.05
+          clearing: False
+          marking: True
+          data_type: "PointCloud2"
+          obstacle_max_range: 1.5
+          obstacle_min_range: 0.0
+          raytrace_max_range: 1.5
+          raytrace_min_range: 0.0
       static_layer:
         map_subscribe_transient_local: True
       always_send_full_costmap: True

@@ -46,4 +46,5 @@ ros2 launch rm_localization ekf.launch.py # Sensor fusion
 ros2 launch rm_localization amcl.launch.py # IF EXISTING MAP: AMCL localization
 ros2 launch rm_slam slam.launch.py # IF NO MAP: SLAM
 ros2 run teleop_twist_keyboard teleop_twist_keyboard # Manual control
+ros2 launch rm_navigation navigation.launch.py # Automatic navigation
 ```
