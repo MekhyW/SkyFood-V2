@@ -13,7 +13,6 @@ Parameters can be overridden on the command line, e.g.:
 """
 
 import os
-
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
