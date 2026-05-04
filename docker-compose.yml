@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  skyfood_robot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - BASE_IMAGE=${BASE_IMAGE:-osrf/ros:humble-desktop}
+    image: skyfood_v2:latest
+    container_name: skyfood_core
+    network_mode: "host" # Required for ROS 2 DDS to discover other nodes on the host/LAN easily
+    privileged: true # Gives access to physical devices (Lidar, cameras)
+    ipc: host # Important for ROS 2 shared memory communication
+    pid: host
+    environment:
+      - ROS_DOMAIN_ID=0
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=all
+    volumes:
+      # Pass through X11 socket for GUIs
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      # Map persistence 
+      - ./skyfood_ws/src/rm_localization/map:/skyfood_ws/src/rm_localization/map:rw
+      - ./skyfood_ws/src/rm_behaviors/config:/skyfood_ws/src/rm_behaviors/config:rw
+    devices:
+      # Pass through RPLidar (assuming it maps to ttyUSB0 or similar, adjust if using udev rules)
+      - /dev/ttyUSB0:/dev/ttyUSB0
+      # Pass through USB devices
+      - /dev/bus/usb:/dev/bus/usb
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
+    command: >
+      ros2 launch rm_bringup bringup.launch.py slam:=false run_mission:=false
+    # You can change the command in the deployment to override to SLAM if needed:
+    # command: ros2 launch rm_bringup bringup.launch.py slam:=true
+
+  foxglove_bridge:
+    image: ghcr.io/foxglove/ros-foxglove-bridge:latest
+    network_mode: "host"
+    command: ros2 run foxglove_bridge foxglove_bridge

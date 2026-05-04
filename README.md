@@ -10,7 +10,7 @@
 8. Behavior tree, create behavior for autodocking with opennav_docking (Mission BT created, docking pending)
 9. Create behavior to open and close doors
 10. Sound playback ✅
-11. Docker and Docker Compose
+11. Docker and Docker Compose ✅
 12. Make the RPLidar work correctly ✅
 13. Integration with motor drivers
 14. OAK4 camera communication tests on Luxonis Hub ✅
@@ -20,18 +20,19 @@
 18. Microphone communication tests ✅
 19. Motor driver communication tests
 20. Door servo motor tests
-21. LiveKit and local conversational AI
-22. AI with function calls for autonomous control and decision making
-23. Final screen software
-24. 4G setup with netbird client 
-25. Environment installation on Jetson
-26. Assembly on physical chassis
-27. Integrate all physical hardware into the main code and get it running, driver parameter tuning
-28. Integration with the application for mission control and debugging
-29. Integration with elevator systems (isolated)
-30. Elevator call and floor change behavior
-31. Integration with AlphaCode platform
-32. Observability Foxglove stack
+21. Battery measurer code
+22. LiveKit and local conversational AI
+23. AI with function calls for autonomous control and decision making
+24. Final screen software
+25. 4G setup with netbird client 
+26. Environment installation on Jetson
+27. Assembly on physical chassis
+28. Integrate all physical hardware into the main code and get it running, driver parameter tuning
+29. Integration with the application for mission control and debugging
+30. Integration with elevator systems (isolated)
+31. Elevator call and floor change behavior
+32. Integration with AlphaCode platform
+33. Observability Foxglove stack
 
 ## Packages
 
@@ -53,6 +54,26 @@
 cd skyfood_ws
 source install/setup.bash
 ```
+
+### Docker Deployment (Production)
+For reproducible deployments, use the provided build script. it automatically detects if you are on a PC or a Jetson and selects the optimized base image.
+```bash
+chmod +x build_docker.sh
+./build_docker.sh
+docker compose up -d
+```
+
+To run the SLAM mapping mode inside docker, you can temporarily override the command:
+```bash
+docker compose run --rm skyfood_robot ros2 launch rm_bringup bringup.launch.py slam:=true
+```
+
+### Bringup command
+```bash
+ros2 launch rm_bringup bringup.launch.py # Start all systems
+```
+
+### Manual commands
 
 ```bash
 # Core systems
