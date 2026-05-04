@@ -8,7 +8,6 @@ import xacro
 
 
 def generate_launch_description():
-
     xacro_file = "robot_base.xacro"
     description_package_name = "robot_description"
     description_package_path = os.path.join(get_package_share_directory(description_package_name))
@@ -19,38 +18,16 @@ def generate_launch_description():
     xacro.process_doc(doc)
     params = {'robot_description': doc.toxml(), 'use_sim_time': True}
 
-    gazebo = IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory('robot_description'), 'launch', 'gazebo.launch.py')]),
-            )
+    gazebo = IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('robot_description'), 'launch', 'gazebo.launch.py')]),)
 
-    transforms = IncludeLaunchDescription(
-                PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory('robot_description'), 'launch', 'transforms.launch.py')]),
-            )
+    transforms = IncludeLaunchDescription(PythonLaunchDescriptionSource([os.path.join(get_package_share_directory('robot_description'), 'launch', 'transforms.launch.py')]),)
 
-    robot_state_publisher = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        name='robot_state_publisher',
-        output='screen',
-        parameters=[params]
-    )
+    robot_state_publisher = Node(package='robot_state_publisher', executable='robot_state_publisher', name='robot_state_publisher', output='screen', parameters=[params])
 
     # RVIZ Configuration
     rviz_config_dir = os.path.join(get_package_share_directory(description_package_name), 'rviz', 'robot_vis.rviz')
-    rviz_node = Node(
-            package='rviz2',
-            executable='rviz2',
-            output='screen',
-            name='rviz_node',
-            parameters=[{'use_sim_time': True}],
-            arguments=['-d', rviz_config_dir]
-        )
+    rviz_node = Node(package='rviz2', executable='rviz2', output='screen', name='rviz_node', parameters=[{'use_sim_time': True}], arguments=['-d', rviz_config_dir])
     
-    spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py',
-                        arguments=['-entity', 'rm', '-x', '0.0', '-y', '0.0', '-z', '0.2', '-topic', 'robot_description'],
-                        output='screen')
-    
+    spawn_entity = Node(package='gazebo_ros', executable='spawn_entity.py', arguments=['-entity', 'rm', '-x', '0.0', '-y', '0.0', '-z', '0.2', '-topic', 'robot_description'], output='screen')
     
     return LaunchDescription([gazebo, robot_state_publisher, rviz_node, spawn_entity, transforms])

@@ -1,0 +1,8 @@
+# Trigger audio playback on the robot.
+# file_path: absolute path to the audio file (WAV / MP3 / OGG)
+# blocking: if true the service call blocks until playback finishes
+string file_path
+bool blocking
+---
+bool success
+string message

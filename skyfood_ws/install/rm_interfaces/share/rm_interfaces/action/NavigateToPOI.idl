@@ -1,0 +1,29 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from rm_interfaces/action/NavigateToPOI.action
+// generated code does not contain a copyright notice
+
+
+module rm_interfaces {
+  module action {
+    @verbatim (language="comment", text=
+      "Navigate the robot to a named Point Of Interest." "\n"
+      "poi_name: must match a name stored via SavePOI")
+    struct NavigateToPOI_Goal {
+      string poi_name;
+    };
+    @verbatim (language="comment", text=
+      "Result (returned when action finishes)")
+    struct NavigateToPOI_Result {
+      boolean success;
+
+      string message;
+    };
+    @verbatim (language="comment", text=
+      "Feedback (streamed while navigating)")
+    struct NavigateToPOI_Feedback {
+      float distance_remaining;
+
+      string status;
+    };
+  };
+};

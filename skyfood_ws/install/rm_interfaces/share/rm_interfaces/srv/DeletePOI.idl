@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rm_interfaces/srv/DeletePOI.srv
+// generated code does not contain a copyright notice
+
+
+module rm_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Remove a named POI from the persistent store.")
+    struct DeletePOI_Request {
+      string name;
+    };
+    struct DeletePOI_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

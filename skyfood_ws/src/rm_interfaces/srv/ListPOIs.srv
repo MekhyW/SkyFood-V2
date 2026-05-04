@@ -1,0 +1,4 @@
+# Return all stored Points Of Interest.
+---
+string[] names
+geometry_msgs/PoseStamped[] poses

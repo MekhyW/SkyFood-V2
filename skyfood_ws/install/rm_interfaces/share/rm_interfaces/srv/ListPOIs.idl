@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from rm_interfaces/srv/ListPOIs.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseStamped.idl"
+
+module rm_interfaces {
+  module srv {
+    @verbatim (language="comment", text=
+      "Return all stored Points Of Interest.")
+    struct ListPOIs_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct ListPOIs_Response {
+      sequence<string> names;
+
+      sequence<geometry_msgs::msg::PoseStamped> poses;
+    };
+  };
+};

@@ -1,0 +1,11 @@
+# Navigate the robot to a named Point Of Interest.
+# poi_name: must match a name stored via SavePOI
+string poi_name
+---
+# Result (returned when action finishes)
+bool success
+string message
+---
+# Feedback (streamed while navigating)
+float32 distance_remaining
+string status

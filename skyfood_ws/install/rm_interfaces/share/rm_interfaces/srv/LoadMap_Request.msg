@@ -1,0 +1,3 @@
+# Load a previously saved map and hand it to the map_server.
+# map_path: absolute path to the .yaml map descriptor file
+string map_path

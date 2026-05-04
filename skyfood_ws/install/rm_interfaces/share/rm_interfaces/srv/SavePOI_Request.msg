@@ -1,0 +1,4 @@
+# Persist a named Point Of Interest (docking station, table, kitchen, …).
+# If a POI with the same name already exists it is overwritten.
+string name
+geometry_msgs/PoseStamped pose
