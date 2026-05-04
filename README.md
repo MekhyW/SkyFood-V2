@@ -35,16 +35,17 @@
 
 ## Packages
 
-1. **`robot_description`**: Contains the robot description for the simulated robot.
-2. **`rm_localization`**: Contains the EKF and AMCL nodes for localization in maps.
-3. **`rm_slam`**: Contains the SLAM nodes for creating maps.
-4. **`rm_navigation`**: Contains the Nav2 nodes for autonomous navigation.
-5. **`rm_interfaces`**: Contains custom `.srv` (SaveMap, LoadMap, SavePOI, PlaySound) and `.action` (NavigateToPOI) definitions used by the high-level logic.
-6. **`rm_behaviors`**: Exposes atomic "skills" as ROS 2 nodes. These nodes encapsulate complex sub-processes (like calling OS-level audio APIs or driving Nav2 with feedback). 
+1. **`rm_bringup`**: Master launch file that brings up all the other packages, with mode for simulation and real robot.
+2. **`robot_description`**: Contains the robot description for the simulated robot.
+3. **`rm_localization`**: Contains the EKF and AMCL nodes for localization in maps.
+4. **`rm_slam`**: Contains the SLAM nodes for creating maps.
+5. **`rm_navigation`**: Contains the Nav2 nodes for autonomous navigation.
+6. **`rm_interfaces`**: Contains custom `.srv` (SaveMap, LoadMap, SavePOI, PlaySound) and `.action` (NavigateToPOI) definitions used by the high-level logic.
+7. **`rm_behaviors`**: Exposes atomic "skills" as ROS 2 nodes. These nodes encapsulate complex sub-processes (like calling OS-level audio APIs or driving Nav2 with feedback). 
    - `map_manager`: Maps `nav2_map_saver` to an API.
    - `poi_manager`: Provides persistent, named coordinate saving (JSON) and an action server for routing to POIs.
    - `sound_player`: Interfaces with `paplay`/`aplay`/`ffplay` for blocking or background audio.
-7. **`rm_mission_bt`**: A `py_trees_ros` behavior tree implementation. It contains individual py_trees leaf `Behaviour` classes that bind to the clients in `rm_behaviors` and sequence them to form full delivery or exploration logic (e.g. `mission_runner.py`).
+8. **`rm_mission_bt`**: A `py_trees_ros` behavior tree implementation. It contains individual py_trees leaf `Behaviour` classes that bind to the clients in `rm_behaviors` and sequence them to form full delivery or exploration logic (e.g. `mission_runner.py`).
 
 ## Launch
 
