@@ -1,0 +1,9 @@
+# Control robot compartment doors individually or all at once.
+# door_id: "UL" (Upper Left), "UR" (Upper Right), "DL" (Down Left), "DR" (Down Right), "ALL"
+# open: true to open, false to close
+
+string door_id
+bool open
+---
+bool success
+string message

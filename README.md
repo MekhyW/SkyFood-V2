@@ -7,12 +7,12 @@
 5. Hyperparameter optimization for nav2 ✅
 6. Saving and loading maps in functions ✅
 7. Saving points of interest and docking stations, and functions for navigating to points ✅
-8. Behavior tree, create behavior for autodocking with opennav_docking (Mission BT created, docking pending)
-9. Create behavior to open and close doors
+8. Create behavior for autodocking with opennav_docking
+9. Create behavior for opening and closing doors ✅
 10. Sound playback ✅
 11. Docker and Docker Compose ✅
 12. Make the RPLidar work correctly ✅
-13. Integration with motor drivers
+13. Integration with motor drivers via ros2_control (Hardware Abstraction)
 14. OAK4 camera communication tests on Luxonis Hub ✅
 15. Computer vision app; face/person detection, proximity detection and IMU topic exposure ✅
 16. A075V floor camera setup
@@ -28,11 +28,13 @@
 26. Environment installation on Jetson
 27. Assembly on physical chassis
 28. Integrate all physical hardware into the main code and get it running, driver parameter tuning
-29. Integration with the application for mission control and debugging
+29. API Gateway for mission control and debugging (Interface contract compatible with V1 API)
 30. Integration with elevator systems (isolated)
 31. Elevator call and floor change behavior
 32. Integration with AlphaCode platform
 33. Observability Foxglove stack
+34. Implement message filters for sensor data synchronization
+35. Implement callback isolation with MutuallyExclusiveCallbackGroup for critical path stability
 
 ## Packages
 

@@ -11,12 +11,14 @@ find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/CompartmentStatus.msg"
   "srv/SaveMap.srv"
   "srv/LoadMap.srv"
   "srv/SavePOI.srv"
   "srv/DeletePOI.srv"
   "srv/ListPOIs.srv"
   "srv/PlaySound.srv"
+  "srv/ControlCompartment.srv"
   "action/NavigateToPOI.action"
   DEPENDENCIES std_msgs geometry_msgs
 )
