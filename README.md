@@ -7,34 +7,35 @@
 5. Hyperparameter optimization for nav2 ✅
 6. Saving and loading maps in functions ✅
 7. Saving points of interest and docking stations, and functions for navigating to points ✅
-8. Create behavior for autodocking with opennav_docking
+8. Create behavior for autodocking with opennav_docking ❌
 9. Create behavior for opening and closing doors ✅
-10. Sound playback ✅
+10. Sound playback behavior ✅
 11. Docker and Docker Compose ✅
 12. RPLidar package ✅
-13. Adoption of ros2_control for complete hardware abstraction and swappability
-14. Integration with motor drivers via ros2_control
+13. Adoption of ros2_control for complete hardware abstraction and swappability ❌
+14. Integration with motor drivers via ros2_control ❌
 15. OAK4 camera communication tests on Luxonis Hub ✅
 16. Computer vision app; face/person detection, proximity detection and IMU topic exposure ✅
 17. A075V floor camera package ✅
-18. Force stop by proximity detection and slope detection (depth map fusion)
-19. Microphone communication tests ✅
-20. Motor driver communication tests
-21. Door compartment servo motor tests
-22. Door compartment interaction via ros2_control
-23. Battery measurer integration via ros2_control
-24. LiveKit and local conversational AI
-25. AI with function calls for autonomous control and decision making
-26. Final screen software
-27. 4G setup with netbird client 
-28. Environment installation on Jetson
-29. Assembly on physical chassis
-30. Get integrated hardware and drivers running, driver parameter tuning
-31. API Gateway for mission control and debugging (Interface contract compatible with V1 API)
-32. Integration with elevator systems (isolated)
-33. Elevator call and floor change behavior
-34. Integration with AlphaCode platform
-35. Observability Foxglove stack
+18. Force stop by proximity detection and slope detection (depth map fusion) ❌
+19. Microphone test ✅
+20. Motor driver tests ❌
+21. Door compartment servo motor tests ❌
+22. Door compartment interaction via ros2_control ❌
+23. Battery measurer integration via ros2_control (trigger docking when battery low) ❌
+24. Wireless controller via ros2_control and teleop_twist_joy ❌
+25. Final screen software ❌
+26. LiveKit and local conversational AI ❌
+27. AI with function calls for autonomous control and decision making ❌
+28. 4G setup with netbird client ❌
+29. Environment installation on Jetson ❌
+30. Assembly on physical chassis ❌
+31. Get integrated hardware and drivers running, driver parameter tuning ❌
+32. API Gateway for mission control and debugging (Interface contract compatible with V1 API) ❌
+33. Integration with elevator systems (isolated) ❌
+34. Elevator call and negotiation behaviors ❌
+35. Integration with AlphaCode platform ❌
+36. Observability Foxglove stack ❌
 
 ## Packages
 
