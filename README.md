@@ -5,37 +5,41 @@
 3. Localization and SLAM packages working ✅
 4. Autonomous navigation from point A to point B ✅
 5. Hyperparameter optimization for nav2 ✅
-6. Saving and loading maps in functions ✅
-7. Saving points of interest and docking stations, and functions for navigating to points ✅
-8. Create behavior for autodocking with opennav_docking ❌
-9. Create behavior for opening and closing doors ✅
-10. Sound playback behavior ✅
-11. Docker and Docker Compose ✅
-12. RPLidar package ✅
-13. Adoption of ros2_control for complete hardware abstraction and swappability ❌
-14. Integration with motor drivers via ros2_control ❌
-15. OAK4 camera communication tests on Luxonis Hub ✅
-16. Computer vision app; face/person detection, proximity detection and IMU topic exposure ✅
-17. A075V floor camera package ✅
-18. Force stop by proximity detection and slope detection (depth map fusion) ❌
-19. Microphone test ✅
-20. Motor driver tests ❌
-21. Door compartment servo motor tests ❌
-22. Door compartment interaction via ros2_control ❌
-23. Battery measurer integration via ros2_control (trigger docking when battery low) ❌
-24. Wireless controller via ros2_control and teleop_twist_joy ❌
-25. Final screen software ❌
-26. LiveKit and local conversational AI ❌
-27. AI with function calls for autonomous control and decision making ❌
-28. 4G setup with netbird client ❌
-29. Environment installation on Jetson ❌
-30. Assembly on physical chassis ❌
-31. Get integrated hardware and drivers running, driver parameter tuning ❌
-32. API Gateway for mission control and debugging (Interface contract compatible with V1 API) ❌
-33. Integration with elevator systems (isolated) ❌
-34. Elevator call and negotiation behaviors ❌
-35. Integration with AlphaCode platform ❌
-36. Observability Foxglove stack ❌
+6. Denoise layer for local costmap, before inflation layer ❌
+7. Saving and loading maps in functions ✅
+8. Saving points of interest and docking stations, and functions for navigating to points ✅
+9. Create behavior for autodocking with opennav_docking ❌
+10. Create behavior for opening and closing doors ✅
+11. Sound playback behavior ✅
+12. Docker and Docker Compose ✅
+13. RPLidar package ✅
+14. Adoption of ros2_control for complete hardware abstraction and swappability ❌
+15. Integration with motor drivers via ros2_control ❌
+16. OAK4 camera communication tests on Luxonis Hub ✅
+17. Computer vision app; face/person detection, proximity detection and IMU topic exposure ✅
+18. A075V floor camera package ✅
+19. Force stop by proximity detection and slope detection (depth map fusion) ❌
+20. Complex behavior trees using Groot2, instead of py_trees ❌
+21. Microphone test ✅
+22. Motor driver tests ❌
+23. Door compartment servo motor tests ❌
+24. Door compartment interaction via ros2_control ❌
+25. Battery measurer integration via ros2_control (trigger docking when battery low) ❌
+26. Wireless controller via ros2_control and teleop_twist_joy ❌
+27. Final screen softwares (React) ❌
+28. LiveKit and local conversational AI ❌
+29. AI with function calls for autonomous control and decision making ❌
+30. 4G setup with netbird client ❌
+31. Environment installation on Jetson ❌
+32. Assembly on physical chassis ❌
+33. Get integrated hardware and drivers running, driver parameter tuning ❌
+34. API Gateway for mission control and debugging (Interface contract compatible with V1 API) ❌
+35. Integration with elevator systems (isolated) ❌
+36. Elevator call and negotiation behaviors ❌
+37. Integration with fleet management backend ❌
+38. Observability Foxglove stack ❌
+39. Keep-out zones with editor options ❌
+40. Dynamic human follow-me (FollowObject action server integration with computer vision) ❌
 
 ## Packages
 
@@ -81,15 +85,14 @@ ros2 launch rm_bringup bringup.launch.py # Start all systems
 ### Manual commands
 
 ```bash
-# Core systems
 ros2 launch robot_description robot_description.launch.py # Robot and virtual world
 ros2 launch rm_localization ekf.launch.py # Sensor fusion
 ros2 launch rm_localization amcl.launch.py # IF EXISTING MAP: AMCL localization
 ros2 launch rm_slam slam.launch.py # IF NO MAP: SLAM
 ros2 run teleop_twist_keyboard teleop_twist_keyboard # Manual control
 ros2 launch rm_navigation navigation.launch.py # Automatic navigation
-
-# High-Level behaviors
 ros2 launch rm_behaviors behaviors.launch.py # Spin up map, audio, and POI servers
+
+# Sample tree execution
 ros2 launch rm_mission_bt mission.launch.py # Execute the delivery logic tree
 ```
