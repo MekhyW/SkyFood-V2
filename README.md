@@ -33,13 +33,15 @@
 31. Environment installation on Jetson ❌
 32. Assembly on physical chassis ❌
 33. Get integrated hardware and drivers running, driver parameter tuning ❌
-34. API Gateway for mission control and debugging (Interface contract compatible with V1 API) ❌
+34. Cloud Bridge / API Gateway for mission control (receiving high-abstraction BT missions) ❌
 35. Integration with elevator systems (isolated) ❌
 36. Elevator call and negotiation behaviors ❌
-37. Integration with fleet management backend ❌
-38. Observability Foxglove stack ❌
-39. Keep-out zones with editor options ❌
-40. Dynamic human follow-me (FollowObject action server integration with computer vision) ❌
+37. Hot-swappable Behavior Trees (on-the-fly mission swapping and interruption) ❌
+38. Dynamic System Orchestrator (seamless transition between Mapping and Localization) ❌
+39. Observability Foxglove stack ❌
+40. Keep-out zones with editor options ❌
+41. Dynamic human follow-me (FollowObject action server integration with computer vision) ❌
+
 
 ## Packages
 

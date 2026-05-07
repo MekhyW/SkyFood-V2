@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4" project_name="Project">
+    <include path="bt_xml/delivery_mission.xml"/>
+    <include path="bt_xml/test_mission.xml"/>
+    <!-- Description of Node Models (used by Groot) -->
+    <TreeNodesModel>
+        <Action ID="ControlCompartment">
+            <input_port name="door_id">
+        Door to control: UL | UR | DL | DR | ALL
+      </input_port>
+            <input_port name="open">
+        true = open the door, false = close it
+      </input_port>
+        </Action>
+        <Action ID="NavigateToPOI">
+            <input_port name="poi_name">
+        Name of the target POI (must be registered via /poi_manager/save_poi)
+      </input_port>
+        </Action>
+        <Action ID="PlaySound">
+            <input_port name="file_path">
+        Absolute path to a WAV / MP3 / OGG file
+      </input_port>
+            <input_port name="blocking" default="false">
+        true = block until playback finishes; false = fire-and-forget
+      </input_port>
+        </Action>
+        <Action ID="SaveMap">
+            <input_port name="map_name">
+        Filename stem for the saved map (e.g. "warehouse_v2")
+      </input_port>
+            <input_port name="save_path">
+        Absolute directory path to write map files into
+      </input_port>
+        </Action>
+    </TreeNodesModel>
+</root>

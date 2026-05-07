@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="4"
+      main_tree_to_execute="TestMission">
+  <BehaviorTree ID="TestMission">
+    <Sequence name="test_sequence">
+      <Sleep msec="5000"/>
+    </Sequence>
+  </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel/>
+
+</root>
