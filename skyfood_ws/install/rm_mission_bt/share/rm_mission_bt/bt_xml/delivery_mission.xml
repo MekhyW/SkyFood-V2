@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  delivery_mission.xml
+  ====================
+  SkyFood delivery mission behavior tree.
+
+  Open this file in Groot2 for visual editing:
+    groot2  (then File → Load)
+
+  To monitor a LIVE running mission in Groot2:
+    1. ros2 launch rm_behaviors behaviors.launch.py
+    2. ros2 launch rm_mission_bt mission.launch.py
+    3. In Groot2 → Connect → Server: localhost:1667
+
+  Adding new nodes
+  ================
+  1. Implement a new C++ class in include/rm_mission_bt/ + src/
+   inheriting from BT::StatefulActionNode (or ConditionNode).
+  2. Register it in src/mission_runner.cpp with factory_.registerNodeType<>().
+  3. Add an <Action> block to <TreeNodesModel> below so Groot2 knows the ports.
+  4. Drag the new node into any tree in Groot2 and set its port values.
+-->
+<root BTCPP_format="4" main_tree_to_execute="DeliveryMission">
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       Custom Node Model
+       Groot2 reads this section offline (without the running program) to
+       know what nodes and ports exist.  Keep it in sync with providedPorts()
+       in each C++ class.
+       ══════════════════════════════════════════════════════════════════════ -->
+  <TreeNodesModel>
+
+    <Action ID="NavigateToPOI">
+      <input_port name="poi_name">
+        Name of the target POI (must be registered via /poi_manager/save_poi)
+      </input_port>
+    </Action>
+
+    <Action ID="PlaySound">
+      <input_port name="file_path">
+        Absolute path to a WAV / MP3 / OGG file
+      </input_port>
+      <input_port name="blocking" default="false">
+        true = block until playback finishes; false = fire-and-forget
+      </input_port>
+    </Action>
+
+    <Action ID="SaveMap">
+      <input_port name="map_name">
+        Filename stem for the saved map (e.g. "warehouse_v2")
+      </input_port>
+      <input_port name="save_path">
+        Absolute directory path to write map files into
+      </input_port>
+    </Action>
+
+    <Action ID="ControlCompartment">
+      <input_port name="door_id">
+        Door to control: UL | UR | DL | DR | ALL
+      </input_port>
+      <input_port name="open">
+        true = open the door, false = close it
+      </input_port>
+    </Action>
+
+  </TreeNodesModel>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       Delivery Mission
+       ══════════════════════════════════════════════════════════════════════ -->
+  <BehaviorTree ID="DeliveryMission">
+    <!--
+      Sequence: every child must return SUCCESS before the next one is ticked.
+      If any child returns FAILURE the whole sequence fails immediately.
+    -->
+    <Sequence name="delivery_sequence">
+
+      <!-- 1. Persist the current map before starting the run -->
+      <SaveMap
+        name="Save Map"
+        map_name="delivery_map"
+        save_path="/tmp/maps"/>
+
+      <!-- 2. Play departure chime (non-blocking → continues immediately) -->
+      <PlaySound
+        name="Departure Chime"
+        file_path="/opt/sounds/departure.wav"
+        blocking="false"/>
+
+      <!-- 3. Drive to the kitchen pick-up point -->
+      <NavigateToPOI
+        name="Go to Kitchen"
+        poi_name="kitchen_pickup"/>
+
+      <!-- 4. Open upper-left compartment for customer to retrieve order -->
+      <ControlCompartment
+        name="Open UL Door"
+        door_id="UL"
+        open="true"/>
+
+      <!-- 5. Play arrival chime and wait until it finishes -->
+      <PlaySound
+        name="Arrival Chime"
+        file_path="/opt/sounds/arrival.wav"
+        blocking="true"/>
+
+    </Sequence>
+  </BehaviorTree>
+
+</root>

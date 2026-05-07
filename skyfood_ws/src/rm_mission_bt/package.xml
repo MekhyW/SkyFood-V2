@@ -2,27 +2,29 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>rm_mission_bt</name>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
   <description>
-    Mission-level behavior tree for SkyFood using py_trees_ros.
-    Orchestrates high-level robot tasks: delivery missions, map saving,
-    sound cues, and POI navigation.
+    Mission-level behavior tree for SkyFood using BehaviorTree.CPP v4 and Groot2.
+    Trees are defined as XML files editable in the Groot2 visual editor, and are
+    executed by a C++ runner node that calls the atomic behavior services/actions
+    provided by rm_behaviors.
   </description>
   <maintainer email="mefkhytheroboticist@gmail.com">mekhy</maintainer>
   <license>Apache-2.0</license>
 
-  <depend>rclpy</depend>
-  <depend>std_msgs</depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_action</depend>
+  <depend>behaviortree_cpp</depend>   <!-- ros-humble-behaviortree-cpp (v4) -->
+  <depend>ament_index_cpp</depend>
   <depend>geometry_msgs</depend>
   <depend>rm_interfaces</depend>
-  <!-- py_trees_ros installed via pip or apt: python3-py-trees-ros -->
 
-  <test_depend>ament_copyright</test_depend>
-  <test_depend>ament_flake8</test_depend>
-  <test_depend>ament_pep257</test_depend>
-  <test_depend>python3-pytest</test_depend>
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
 
   <export>
-    <build_type>ament_python</build_type>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>

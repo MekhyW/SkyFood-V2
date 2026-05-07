@@ -19,7 +19,7 @@
 17. Computer vision app; face/person detection, proximity detection and IMU topic exposure ✅
 18. A075V floor camera package ✅
 19. Force stop by proximity detection and slope detection (depth map fusion) ❌
-20. Complex behavior trees using Groot2, instead of py_trees ❌
+20. Groot2 for complex behavior trees, instead of py_trees ✅
 21. Microphone test ✅
 22. Motor driver tests ❌
 23. Door compartment servo motor tests ❌

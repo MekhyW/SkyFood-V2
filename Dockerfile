@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install -y \
     ros-humble-robot-localization \
     ros-humble-teleop-twist-keyboard \
     ros-humble-rmw-cyclonedds-cpp \
+    ros-humble-behaviortree-cpp \
     python3-rosdep \
     && rm -rf /var/lib/apt/lists/*
 
