@@ -5,7 +5,7 @@
 3. Localization and SLAM packages working ✅
 4. Autonomous navigation from point A to point B ✅
 5. Hyperparameter optimization for nav2 ✅
-6. Denoise layer for local costmap, before inflation layer ❌
+6. Denoise layer for local costmap, before inflation layer ✅
 7. Saving and loading maps in functions ✅
 8. Saving points of interest and docking stations, and functions for navigating to points ✅
 9. Create behavior for autodocking with opennav_docking ❌

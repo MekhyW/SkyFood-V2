@@ -31,4 +31,5 @@ def generate_launch_description() -> LaunchDescription:
         Node(package='rm_behaviors', executable='map_manager', name='map_manager', output='screen', parameters=[{'use_sim_time': use_sim_time}]),
         Node(package='rm_behaviors', executable='poi_manager', name='poi_manager', output='screen', parameters=[{'use_sim_time': use_sim_time, 'pois_file': pois_file}]),
         Node(package='rm_behaviors', executable='sound_player', name='sound_player', output='screen', parameters=[{'use_sim_time': use_sim_time}]),
+        Node(package='rm_behaviors', executable='compartment_manager', name='compartment_manager', output='screen', parameters=[{'use_sim_time': use_sim_time}]),
     ])

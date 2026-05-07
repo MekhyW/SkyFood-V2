@@ -1,5 +1,11 @@
 action/NavigateToPOI.action
 action/NavigateToPOI.idl
+msg/CompartmentStatus.idl
+msg/CompartmentStatus.msg
+srv/ControlCompartment.idl
+srv/ControlCompartment.srv
+srv/ControlCompartment_Request.msg
+srv/ControlCompartment_Response.msg
 srv/DeletePOI.idl
 srv/DeletePOI.srv
 srv/DeletePOI_Request.msg
